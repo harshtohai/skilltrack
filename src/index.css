@@ -1,0 +1,218 @@
+@import "tailwindcss";
+
+:root {
+  /* Light Theme (Soft Enterprise Dashboard) */
+  --canvas: #A4AAB6;
+  --shell: #F3F3F0;
+  --surface: #FFFFFF;
+  --surface-warm: #FFF9E9;
+  --surface-muted: #F1F1EE;
+
+  /* Typography Colors */
+  --text-primary: #303030;
+  --text-secondary: #74767D;
+  --text-muted: #9A9A9A;
+
+  /* Borders */
+  --border: #E2E2DE;
+  --border-strong: #D5D5D0;
+
+  /* Accent Tokens */
+  --accent-yellow: #F8D84A;
+  --accent-yellow-soft: #FFF0A8;
+  --accent-yellow-text: #665400;
+  --accent-green: #BFE7C2;
+  --accent-green-text: #305B35;
+  --accent-purple: #D8C9F2;
+  --accent-purple-text: #55436F;
+  --accent-rose: #FCE8E8;
+  --accent-rose-text: #8A3030;
+
+  --dark-panel: #303030;
+  --dark-panel-text: #FFFFFF;
+  --white: #FFFFFF;
+
+  /* Chart Colors */
+  --chart-neutral: #8D8D8D;
+  --chart-secondary: #C9C5A8;
+  --chart-accent: #F8D84A;
+
+  /* Shadows */
+  --shadow-shell: 0 18px 50px rgba(35, 38, 45, 0.16);
+  --shadow-card: 0 3px 14px rgba(35, 38, 45, 0.05);
+  --shadow-float: 0 8px 22px rgba(35, 38, 45, 0.10);
+
+  /* Radius Tokens */
+  --radius-shell: 28px;
+  --radius-card: 20px;
+  --radius-small: 14px;
+  --radius-pill: 999px;
+
+  /* Legacy mappings */
+  --bg: #F3F3F0;
+  --border-color: #E2E2DE;
+  --text: #303030;
+  --muted: #74767D;
+  --accent: #F8D84A;
+}
+
+:root.dark, [data-theme="dark"] {
+  /* Dark Theme (Soft Enterprise Dashboard - Charcoal Edition) */
+  --canvas: #121418;
+  --shell: #1E2127;
+  --surface: #262932;
+  --surface-warm: #2F2A1E;
+  --surface-muted: #1D2026;
+
+  /* Typography Colors */
+  --text-primary: #EDEDEA;
+  --text-secondary: #9EA2AD;
+  --text-muted: #727682;
+
+  /* Borders */
+  --border: #353943;
+  --border-strong: #454B58;
+
+  /* Accent Tokens */
+  --accent-yellow: #F8D84A;
+  --accent-yellow-soft: #3F3613;
+  --accent-yellow-text: #F8D84A;
+  --accent-green: #1E3A24;
+  --accent-green-text: #A6EBB0;
+  --accent-purple: #322648;
+  --accent-purple-text: #DACAF4;
+  --accent-rose: #401F22;
+  --accent-rose-text: #FCA5A5;
+
+  --dark-panel: #14161B;
+  --dark-panel-text: #EDEDEA;
+  --white: #262932;
+
+  /* Chart Colors */
+  --chart-neutral: #9599A8;
+  --chart-secondary: #C9C5A8;
+  --chart-accent: #F8D84A;
+
+  /* Shadows */
+  --shadow-shell: 0 22px 60px rgba(0, 0, 0, 0.5);
+  --shadow-card: 0 3px 14px rgba(0, 0, 0, 0.28);
+  --shadow-float: 0 8px 24px rgba(0, 0, 0, 0.38);
+
+  /* Legacy mappings */
+  --bg: #1E2127;
+  --border-color: #353943;
+  --text: #EDEDEA;
+  --muted: #9EA2AD;
+  --accent: #F8D84A;
+}
+
+html, body {
+  background-color: var(--canvas);
+  color: var(--text-primary);
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar for calm enterprise tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Automatic dark mode overrides for Soft Enterprise Dashboard utility classes */
+.dark .bg-white {
+  background-color: var(--surface) !important;
+}
+
+.dark .text-\[\#303030\] {
+  color: var(--text-primary) !important;
+}
+
+.dark .text-\[\#74767D\] {
+  color: var(--text-secondary) !important;
+}
+
+.dark .text-\[\#9A9A9A\] {
+  color: var(--text-muted) !important;
+}
+
+.dark .border-\[\#E2E2DE\] {
+  border-color: var(--border) !important;
+}
+
+.dark .border-\[\#D5D5D0\] {
+  border-color: var(--border-strong) !important;
+}
+
+.dark .bg-\[\#F3F3F0\] {
+  background-color: var(--shell) !important;
+}
+
+.dark .bg-\[\#F1F1EE\] {
+  background-color: var(--surface-muted) !important;
+}
+
+.dark .bg-\[\#A4AAB6\] {
+  background-color: var(--canvas) !important;
+}
+
+.dark .bg-\[\#FFF9E9\] {
+  background-color: var(--surface-warm) !important;
+}
+
+.dark .bg-\[\#FFF0A8\] {
+  background-color: var(--accent-yellow-soft) !important;
+  color: var(--accent-yellow-text) !important;
+}
+
+.dark .text-\[\#665400\] {
+  color: var(--accent-yellow) !important;
+}
+
+.dark .bg-\[\#BFE7C2\] {
+  background-color: var(--accent-green) !important;
+  color: var(--accent-green-text) !important;
+}
+
+.dark .text-\[\#305B35\] {
+  color: var(--accent-green-text) !important;
+}
+
+.dark .bg-\[\#D8C9F2\] {
+  background-color: var(--accent-purple) !important;
+  color: var(--accent-purple-text) !important;
+}
+
+.dark .text-\[\#55436F\] {
+  color: var(--accent-purple-text) !important;
+}
+
+.dark .bg-\[\#FCE8E8\] {
+  background-color: var(--accent-rose) !important;
+  color: var(--accent-rose-text) !important;
+}
+
+.dark .text-\[\#8A3030\] {
+  color: var(--accent-rose-text) !important;
+}
+
+.dark .bg-\[\#303030\] {
+  background-color: var(--dark-panel) !important;
+}
+

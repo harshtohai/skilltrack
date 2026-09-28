@@ -1,0 +1,8 @@
+{
+  "name": "SkillTrack Maharashtra",
+  "description": "A consent-based, longitudinal skilling-outcomes and impact-measurement platform for the Government of Maharashtra linking training with job outcomes, employer verification, and Gemini-powered policy insights.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
